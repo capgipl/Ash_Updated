@@ -25,7 +25,7 @@ namespace Presentation_Layer.Account.Employee.Emp_Schedule
                 Id i = new Id();
 
                 t.MatchName = txtMatchName.Text;
-                t.VenueName = ddlVenue.SelectedValue;
+                t.VenueName = txtVenue.Text;
                 t.ScheduleDate = DateTime.Parse(txtScheduleDate.Text);
                 t.StartTime = txtStartTime.Text;
                 t.EndTime = txtEndTime.Text;

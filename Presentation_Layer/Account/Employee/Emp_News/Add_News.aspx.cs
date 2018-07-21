@@ -26,7 +26,7 @@ namespace Presentation_Layer.Account.Employee.Emp_News
 
                 t.Newsdate = DateTime.Parse(txtteamid.Text);
                 t.NewsDescription = txtNewsDesc.Text;
-                t.MatchName = ddlMatchName.SelectedValue;
+                t.MatchName = txtMatchName.Text;
            
 
                 BLL obj = new BLL();

@@ -25,9 +25,9 @@ namespace Presentation_Layer.Account.Employee.Emp_Match
                 Id i = new Id();
 
                 t.MatchName = txtMatchName.Text;
-                t.TeamOneName = dlteam1.SelectedValue;
-                t.TeamTwoName = dlteam2.SelectedValue;
-                t.VenueName = dlvenue.SelectedValue;
+                t.TeamOneName = txtTeamOne.Text;
+                t.TeamTwoName = txtTeamTwo.Text;
+                t.VenueName = txtVenue.Text;
 
                 BLL obj = new BLL();
                 obj.insert_Match(t);

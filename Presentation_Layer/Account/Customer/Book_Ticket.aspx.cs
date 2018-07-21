@@ -34,7 +34,7 @@ namespace Presentation_Layer.Account.Customer
                         }
                     }
 
-                    TeamName1.Text = count[0, 0].ToString();
+                    availabletic.Text = count[0, 0].ToString();
                 }
             }
             catch (Exception ex)
@@ -71,20 +71,20 @@ namespace Presentation_Layer.Account.Customer
             try
             {
                 Ticket t = new Ticket();
-                if (Played.Text != "" && DropDownList1.SelectedIndex >= 0 && won1.Text != "")
+                if (nooftic.Text != "" && MatchName.SelectedIndex >= 0 && ticcategory.SelectedIndex>=0)
                 {
 
                     TicketCategory tc = new TicketCategory();
-                    t.TicketCategoryId = DropDownList1.SelectedIndex;
-                    t.MatchId = (won1.SelectedIndex) + 1;
-                    t.NumberOfTickets = Played.Text;
-                    int x = DropDownList1.SelectedIndex;
+                    t.TicketCategoryId = ticcategory.SelectedIndex;
+                    t.MatchId = (MatchName.SelectedIndex) + 1;
+                    t.NumberOfTickets = nooftic.Text;
+                    int x = ticcategory.SelectedIndex;
                     //MessageBox.Show(x.ToString());
-                    Tied.Text = ((x + 1) * 1000 * int.Parse(Played.Text)).ToString();
+                    price1.Text = ((x + 1) * 1000 * int.Parse(nooftic.Text)).ToString();
 
 
 
-                    t.Price = int.Parse(Tied.Text);
+                    t.Price = int.Parse(price1.Text);
 
                     //txtcnt.Text = (int.Parse(txtcnt.Text)-int.Parse(txttid.Text)).ToString();
 
@@ -94,11 +94,11 @@ namespace Presentation_Layer.Account.Customer
 
 
 
-                    index = DropDownList1.SelectedIndex;
-                    index_1 = (won1.SelectedIndex) + 1;
+                    index = MatchName.SelectedIndex;
+                    index_1 = (ticcategory.SelectedIndex) + 1;
                     //MessageBox.Show((count[index + 1, index_1] - int.Parse(txttid.Text)).ToString());
-                    count[index + 1, index_1] = count[index + 1, index_1] - int.Parse(Played.Text);
-                    TeamName1.Text = (count[index + 1, index_1]).ToString();
+                    count[index + 1, index_1] = count[index + 1, index_1] - int.Parse(nooftic.Text);
+                    ticcategory.Text = (count[index + 1, index_1]).ToString();
                     Response.Write("<script type='text/javascript'>alert('Ticket Booked Successfully')</script>");
                    
                 }
@@ -122,9 +122,9 @@ namespace Presentation_Layer.Account.Customer
 
         protected void Unnamed_Click(object sender, EventArgs e)
         {
-            won1.Text = "";
-            TeamName1.Text = "";
-            Played.Text = "";
+            ticcategory.SelectedIndex = 0;
+            nooftic.Text = "";
+            MatchName.SelectedIndex = 0;
         }
     }
        }

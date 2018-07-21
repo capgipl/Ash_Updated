@@ -24,14 +24,14 @@ namespace Presentation_Layer.Account.Employee.Emp_Stat
                 Stat t = new Stat();
                 Id i = new Id();
 
-                t.TeamName = ddlTeamName.SelectedValue;
+                t.TeamName = TeamName.SelectedValue;
                 t.Played = int.Parse(txtPlayed.Text);
                 t.Won = int.Parse(txtWon.Text);
                 t.Lost = int.Parse(txtLost.Text);
                 t.Tied = int.Parse(txtTied.Text);
                 t.NR = int.Parse(txtNR.Text);
                 t.NetRR = decimal.Parse(txtNetRR.Text);
-                t.Pts = int.Parse(txtPoints.Text);
+                t.Pts = int.Parse(TextBox1.Text);
                 t.FromPoints = int.Parse(txtFromPoints.Text);
 
                 BLL obj = new BLL();
@@ -58,7 +58,7 @@ namespace Presentation_Layer.Account.Employee.Emp_Stat
             lblNR.Text = "";
             lblPlayed.Text = "";
             lblPoints.Text = "";
-            lblTeamName.Text = "";
+           
             lblTied.Text = "";
             lblWon.Text = "";
         }

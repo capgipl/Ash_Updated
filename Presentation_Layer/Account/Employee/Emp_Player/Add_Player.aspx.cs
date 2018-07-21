@@ -25,7 +25,7 @@ namespace Presentation_Layer.Account.Employee.Emp_Player
                 Id i = new Id();
 
                 t.PlayerName = txtPlayerName.Text;
-                t.TeamName= txtTeamName.SelectedValue;
+                t.TeamName= txtTeamName.Text;
                 t.Age = int.Parse(txtAge.Text);
                 t.BirthPlace = txtBirthPlace.Text;
                 t.Role = txtRole.Text;
